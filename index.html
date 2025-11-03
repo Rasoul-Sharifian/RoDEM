@@ -280,10 +280,71 @@
   </div>
 </section>
 
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <!-- <h2 class="title is-3">Description</h2> -->
+        <div class="content has-text-justified" style="font-size: 0.95rem;">
+          <!-- TODO: Replace with your paper abstract -->
+          <p>
+            We present RoDEM (Robust Depth Estimation in MIS), a comprehensive benchmark for evaluating the accuracy and robustness of monocular single-shot depth estimation (MoSDE) methods in MIS.
+            RoDEM introduces nine representative perturbations—seven image perturbations (smoke, bleeding, lighting variations, defocus, motion blur, and lens dirtiness) and two surgical gestures perturbations (organ deformation and incision)—and provides an ex-vivo dataset of 29,803 laparoscopic RGB-D images of sheep organs (liver, kidney, heart-lung).
+            Using carefully defined metrics, RoDEM benchmarks nine state-of-the-art MoSDE methods under realistic surgical conditions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8-GIF grid -->
+<section class="section" id="qualitative-gifs">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Samples from RoDEM dataset</h2>
+
+    <div class="gif-grid">
+      <figure class="gif-item">
+        <img src="static/RoDEM_gifs/Blood.gif" alt="Blood" loading="lazy">
+        <figcaption>Blood</figcaption>
+      </figure>
+      <figure class="gif-item">
+        <img src="static/RoDEM_gifs/Defocus.gif" alt="Defocus" loading="lazy">
+        <figcaption>Defocus</figcaption>
+      </figure>
+      <figure class="gif-item">
+        <img src="static/RoDEM_gifs/Deformation.gif" alt="Deformation" loading="lazy">
+        <figcaption>Deformation</figcaption>
+      </figure>
+      <figure class="gif-item">
+        <img src="static/RoDEM_gifs/Dirty.gif" alt="Dirty Lens" loading="lazy">
+        <figcaption>Dirty Lens</figcaption>
+      </figure>
+      <figure class="gif-item">
+        <img src="static/RoDEM_gifs/Incision.gif" alt="Incision" loading="lazy">
+        <figcaption>Incision</figcaption>
+      </figure>
+      <figure class="gif-item">
+        <img src="static/RoDEM_gifs/Light.gif" alt="Light Change" loading="lazy">
+        <figcaption>Light</figcaption>
+      </figure>
+      <figure class="gif-item">
+        <img src="static/RoDEM_gifs/Motion.gif" alt="Motion Blur" loading="lazy">
+        <figcaption>Motion Blur</figcaption>
+      </figure>
+      <figure class="gif-item">
+        <img src="static/RoDEM_gifs/Smoke.gif" alt="Smoke" loading="lazy">
+        <figcaption>Smoke</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
 
 <!-- Teaser image-->
 <section class="hero teaser" style="padding-top:.5rem; padding-bottom:.5rem;">
   <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Data acquisition setup</h2>
     <div class="hero-body">
       <!-- TODO: Replace with your teaser video -->
       <img src="static/images/teaser.svg" 
@@ -301,43 +362,9 @@
 </section>
 <!-- End teaser video -->
 
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified" style="font-size: 0.95rem;">
-          <!-- TODO: Replace with your paper abstract -->
-          <p>
-            <strong>Purpose.</strong> Monocular Single-shot Depth Estimation (MoSDE) methods for
-            Minimally-Invasive Surgery (MIS) are promising but their robustness in surgical
-            conditions remains questionable. We introduce the RoDEM benchmark, comprising an advanced analysis of perturbations, a dataset acquired in realistic MIS
-            conditions and metrics. The dataset consists of 29,803 ex-vivo images including 44 video sequences with depth Ground-Truth covering clean conditions and
-            nine perturbations. We give the performance evaluation of nine existing MoSDE
-            methods.<br>
-            <strong>Methods.</strong> An RGB-D structured-light camera was firmly attached to a laparoscope. The two cameras were internally calibrated and the rigid transformation
-            between them was estimated. Synchronised images and videos were captured
-            while producing real perturbations in three settings. The depth-maps were eventually transferred to the laparoscope viewpoint and the images categorised by
-            perturbation severity.<br>
-            <strong>Results.</strong> The proposed metrics cover accuracy (clean condition performance)
-            and robustness (resilience to perturbations). We found that foundation models
-            demonstrated higher accuracy than the other methods. All methods were robust
-            to motion blur and bright light. Methods trained on large datasets were robust
-            against smoke, blood, and low light whereas the other methods exhibited reduced
-            robustness. None of the methods coped with lens dirtiness and defocus blur.<br>
-            <strong>Conclusion.</strong> This study highlighted the importance of robustness evaluation in
-            MoSDE as many existing methods showed reduced accuracy against common surgical perturbations. It emphasises the importance of training with large datasets
-            including perturbations. The proposed benchmark gives a precise and detailed
-            analysis of a method’s performance in the MIS conditions. It will be made publicly
-            available.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+
 <!-- End paper abstract -->
+
 
 
 <!-- Image carousel -->

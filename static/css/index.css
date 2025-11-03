@@ -750,4 +750,60 @@ a:focus {
 }
 
 
+/* --- RoDEM GIF grid: force 4×2 layout --- */
+#qualitative-gifs .gif-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important; /* 4 per row */
+  gap: 16px !important;
+  justify-items: center;
+  align-items: start;
+  margin-top: 1.25rem;
+}
+
+#qualitative-gifs .gif-item {
+  text-align: center;
+  background: var(--background-accent);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  padding: 6px;
+}
+
+/* Choose ONE of the two blocks below depending on whether you prefer cropping or not */
+
+/* A) Fill tiles (may crop a bit, looks uniform) */
+#qualitative-gifs .gif-item img {
+  width: 100%;
+  max-width: 220px;          /* tweak size */
+  aspect-ratio: 16 / 9;      /* consistent tiles */
+  object-fit: cover;         /* fills tile, can crop */
+  display: block;
+  border-radius: 8px;
+}
+
+/* B) No cropping (comment A out and use this instead) */
+/*
+#qualitative-gifs .gif-item img {
+  width: 100%;
+  max-width: 220px;
+  height: 150px;             // fixed height for equal rows
+  object-fit: contain;       // no crop
+  background: #fff;          // letterbox background
+  display: block;
+  border-radius: 8px;
+}
+*/
+
+#qualitative-gifs .gif-item figcaption {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  padding-top: 6px;
+}
+
+/* Keep 4×2 even on small screens (remove if you want it responsive) */
+@media (max-width: 99999px) {
+  #qualitative-gifs .gif-grid {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+}
 
